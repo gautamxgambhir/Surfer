@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>URL Summarizer</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Surfer</h1>
+
+    <!-- Radio Buttons for selecting the action -->
+    <div>
+      <label><input type="radio" name="action" value="website_info" checked> Website Information</label><br>
+      <label><input type="radio" name="action" value="webpage_summary"> Webpage Content Summary</label>
+    </div>
+
+    <div id="bulletPointsContainer" style="display: none;">
+      <label><input type="checkbox" id="bulletPointsCheck"> Get Summary in Bullet Points</label><br>
+      <div id="bulletPointsInput" style="display: none;">
+        <label for="bulletPointsNumber">Number of Bullet Points:</label>
+        <input type="number" id="bulletPointsNumber" min="1" value="3">
+      </div>
+    </div>
+
+    <button id="submit">Submit</button>
+    <div id="summaryContainer"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

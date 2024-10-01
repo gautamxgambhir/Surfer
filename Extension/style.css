@@ -1,0 +1,30 @@
+.container {
+  width: 300px;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: #0388fc;
+}
+
+#submit {
+  width: 100%;
+  padding: 10px;
+  background-color: #0388fc;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+#summaryContainer {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  max-height: 150px;
+  overflow-y: auto; /* Allow scrolling if content exceeds height */
+}
