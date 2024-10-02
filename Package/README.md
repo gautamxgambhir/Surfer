@@ -3,8 +3,7 @@
 ![Python](https://img.shields.io/badge/python-3.12-blue)
 ![Status](https://img.shields.io/badge/status-stable-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-red)
-![Together-AI](https://img.shields.io/badge/Together%20AI-0f6fff
-)
+![Together-AI](https://img.shields.io/badge/Together%20AI-0f6fff)
 ![BART](https://img.shields.io/badge/BART-8A2BE2)
 
 ## What is it?
@@ -27,61 +26,19 @@ Here’s what makes **Surfer** essential :
 
 ## Where to get it?
 
-The extension is hosted on GitHub at : https://github.com/your-repo-link/surfer
-
-## Installation and Setup
-
-#### 1. Clone the repository :
-``` 
-git clone https://github.com/your-repo-link/surfer.git 
-```
-
-#### 2. Backend setup (Make sure the ```app.py``` server is running) :
- - Navigate to the project directory.
- - Install the required Python dependencies :
-    ```
-    pip install -r requirements.txt
-    ```
- - Make sure to enter your [Together AI]("https://www.together.ai/") API key in ```api_key.txt```.
-
- - Start the Flask server :
-    ```
-    python app.py
-    ```
-#### 2. Load the extension in Chrome :
- - Go to **chrome://extensions/** in your browser.
- - Enable **Developer Mode** in the top-right corner.
- - Click **Load unpacked** and select the ```surfer``` directory.
-
-## Usage
-Once installed, Surfer can summarize websites and webpage content directly from your Chrome browser :
-
-[Download Video Tutorial for Surfer Usage](https://cdn.discordapp.com/attachments/924595995252232222/1290820853075808307/Project_Video.mp4?ex=66fdda19&is=66fc8899&hm=0fde6035c0fdcc04517fa4554bd821535504d7e0f23bb829355c7622c2263bbc&)
-
-#### 1. Open the Surfer Extension :
- - Click on the Surfer icon in your Chrome toolbar.
-#### 2. Select a Radio Button :
- - **Website Information** : Summarizes the website's core details.
-- **Webpage Content Summary** : Summarizes the visible content of the webpage you're currently on.
-#### 3. Submit Button :
- - Click **Submit** to get the summary of the webpage or website information directly in the extension's popup.
-
-## Dependencies
- - [**Flask** : Backend server for handling summarization requests.]("https://flask.palletsprojects.com/en/3.0.x/")
- - [**Together API** : Real-time AI API for generating summaries.]("https://www.together.ai/")
- - [**BART Model** : Summarization model for content extraction.]("https://huggingface.co/docs/transformers/en/model_doc/bart")
+The extension is hosted on GitHub at : https://github.com/gautamxgambhir/surferr
 
 ## Package
 
 #### Links
- - [PyPi](https://pypi.org/project/surfer/0.1/)
- - [Source code](https://github.com/gautamxgambhir/surfer)
+ - [PyPi](https://pypi.org/project/surferr/0.2/)
+ - [Source code](https://github.com/gautamxgambhir/surferr)
 
 #### Package Installation
-    pip install surfer
+    pip install surferr
 
 ### Upgrade
-    pip install surfer --upgrade
+    pip install surferr --upgrade
 
 #### Package Features
  - Summarize any text
@@ -92,7 +49,7 @@ Once installed, Surfer can summarize websites and webpage content directly from 
 ##### Setup of Package
 
 ```
-from surfer import Surfer, version
+from surferr import Surfer, version
 
 # Make sure to provide your API key of Together AI
 API_KEY = "YOUR_API_KEY"
@@ -145,6 +102,48 @@ print(webpage_summary)
 website_info = surfer.website_info_summary(url)
 print(website_info)
 ```
+
+## Installation and Setup
+
+#### 1. Clone the repository :
+``` 
+git clone https://github.com/gautamxgambhir/Surferr.git 
+```
+
+#### 2. Backend setup (Make sure the ```app.py``` server is running) :
+ - Navigate to the project directory.
+ - Install the required Python dependencies :
+    ```
+    pip install -r requirements.txt
+    ```
+ - Make sure to enter your [Together AI](https://www.together.ai/) API key in ```api_key.txt```.
+
+ - Start the Flask server :
+    ```
+    python app.py
+    ```
+#### 2. Load the extension in Chrome :
+ - Go to **chrome://extensions/** in your browser.
+ - Enable **Developer Mode** in the top-right corner.
+ - Click **Load unpacked** and select the ```surfer``` directory.
+
+## Usage
+Once installed, Surfer can summarize websites and webpage content directly from your Chrome browser :
+
+[Download Video Tutorial for Surfer Usage](https://cdn.discordapp.com/attachments/924595995252232222/1290820853075808307/Project_Video.mp4?ex=66fdda19&is=66fc8899&hm=0fde6035c0fdcc04517fa4554bd821535504d7e0f23bb829355c7622c2263bbc&)
+
+#### 1. Open the Surfer Extension :
+ - Click on the Surfer icon in your Chrome toolbar.
+#### 2. Select a Radio Button :
+ - **Website Information** : Summarizes the website's core details.
+- **Webpage Content Summary** : Summarizes the visible content of the webpage you're currently on.
+#### 3. Submit Button :
+ - Click **Submit** to get the summary of the webpage or website information directly in the extension's popup.
+
+## Dependencies
+ - [**Flask** : Backend server for handling summarization requests.](https://flask.palletsprojects.com/en/3.0.x/)
+ - [**Together API** : Real-time AI API for generating summaries.](https://www.together.ai/)
+ - [**BART Model** : Summarization model for content extraction.](https://huggingface.co/docs/transformers/en/model_doc/bart)
 
 ## Contact
 

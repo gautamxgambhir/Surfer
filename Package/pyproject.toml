@@ -3,8 +3,8 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "surfer"
-version = "0.1"
+name = "surferr"
+version = "0.2"
 authors = [
   { name="Gautam Gambhir", email="ggambhir1919@gmail.com" },
 ]

@@ -1,6 +1,6 @@
 import setuptools
 from setuptools import setup, find_packages
-from src.surfer.__init__ import __version__
+from src.surferr.__init__ import __version__
 
 VERSION = __version__
 
@@ -8,7 +8,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="surfer",
+    name="surferr",
     version=VERSION,
     author="Gautam Gambhir",
     author_email="ggambhir1919@gmail.com",

@@ -1,0 +1,10 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/surferr/__init__.py
+src/surferr.egg-info/PKG-INFO
+src/surferr.egg-info/SOURCES.txt
+src/surferr.egg-info/dependency_links.txt
+src/surferr.egg-info/top_level.txt
