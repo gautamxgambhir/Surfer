@@ -31,7 +31,7 @@ The extension is hosted on GitHub at : https://github.com/gautamxgambhir/surferr
 ## Package
 
 #### Links
- - [PyPi](https://pypi.org/project/surferr/0.2/)
+ - [PyPi](https://pypi.org/project/surferr/0.3/)
  - [Source code](https://github.com/gautamxgambhir/surferr)
 
 #### Package Installation

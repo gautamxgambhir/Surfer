@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: surferr
-Version: 0.2
+Version: 0.3
 Summary: AI-Powered Website & Webpage Summarizer
 Home-page: https://github.com/gautamxgambhir/Surferr
 Author: Gautam Gambhir
@@ -47,7 +47,7 @@ The extension is hosted on GitHub at : https://github.com/gautamxgambhir/surferr
 ## Package
 
 #### Links
- - [PyPi](https://pypi.org/project/surferr/0.2/)
+ - [PyPi](https://pypi.org/project/surferr/0.3/)
  - [Source code](https://github.com/gautamxgambhir/surferr)
 
 #### Package Installation
@@ -132,7 +132,7 @@ git clone https://github.com/gautamxgambhir/Surferr.git
     ```
     pip install -r requirements.txt
     ```
- - Make sure to enter your [Together AI]("https://www.together.ai/") API key in ```api_key.txt```.
+ - Make sure to enter your [Together AI](https://www.together.ai/) API key in ```api_key.txt```.
 
  - Start the Flask server :
     ```
@@ -157,9 +157,9 @@ Once installed, Surfer can summarize websites and webpage content directly from 
  - Click **Submit** to get the summary of the webpage or website information directly in the extension's popup.
 
 ## Dependencies
- - [**Flask** : Backend server for handling summarization requests.]("https://flask.palletsprojects.com/en/3.0.x/")
- - [**Together API** : Real-time AI API for generating summaries.]("https://www.together.ai/")
- - [**BART Model** : Summarization model for content extraction.]("https://huggingface.co/docs/transformers/en/model_doc/bart")
+ - [**Flask** : Backend server for handling summarization requests.](https://flask.palletsprojects.com/en/3.0.x/)
+ - [**Together API** : Real-time AI API for generating summaries.](https://www.together.ai/)
+ - [**BART Model** : Summarization model for content extraction.](https://huggingface.co/docs/transformers/en/model_doc/bart)
 
 ## Contact
 
