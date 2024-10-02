@@ -1,3 +1,9 @@
+<div align="center">
+  <img src="https://i.ibb.co/gDjsWyg/Logo-Image.png"><br>
+</div>
+
+-----------------
+
 # Surfer: AI-Powered Website & Webpage Summarizer
 
 ![Python](https://img.shields.io/badge/python-3.12-blue)
