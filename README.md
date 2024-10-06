@@ -34,6 +34,7 @@ Here’s what makes **Surfer** essential :
 
 - **Dark/Light Theme Toggle**: Surfer now includes a theme toggle button, allowing users to switch between light and dark modes for a comfortable browsing experience.
 - **Improved UI**: The UI has been enhanced for better and a more intuitive user experience. All elements, including the radio buttons and submit button, are now more user-friendly and visually appealing.
+- **Copy Summary**: Now, to make it easier for user to copy the generated summary, The user can simply click on the Summary to copy it to the clipoard.
 
 
 ## Where to get it?

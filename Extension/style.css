@@ -9,6 +9,7 @@
   --button-bg-color: #0388fc;
   --button-hover-color: #ffffff;
   --summary-bg-color: #f1f1f1;
+  --summary-bg-color-hover: #c6c6c6;
   --icon-fill: #5b5b5b;
   --icon-fill-hover: #2c2c2c;
 }
@@ -20,6 +21,7 @@
   --border-color: #ffffff;
   --button-bg-color: #0388fc;
   --button-hover-color: #333333;
+  --summary-bg-color-hover: #5b5b5b;
   --summary-bg-color: #414141;
   --icon-fill: #8a8a8a;
   --icon-fill-hover: rgb(197, 197, 197);
@@ -49,9 +51,11 @@
   margin: 0 auto;
   padding: 20px;
   flex-direction: column;
+  pointer-events: auto
 }
 
 .title {
+  z-index: 100;
   font-size: 55px;
   color: var(--title-color);
   font-family: "Ubuntu", sans-serif;
@@ -112,6 +116,11 @@
   max-height: 250px;
   overflow-y: auto;
   text-align: center;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.summaryContainer:hover{
+  background-color: var(--summary-bg-color-hover);
 }
 
 .sun-and-moon> :is(.moon, .sun, .sun-beams) {

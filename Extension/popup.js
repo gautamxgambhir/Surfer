@@ -82,3 +82,18 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', ({ 
     theme.value = isDark ? 'dark' : 'light';
     setPreference();
 });
+
+document.getElementById('summaryContainer').addEventListener('click', function () {
+    const summaryText = document.getElementById('summaryContainer').innerText;
+
+    if (summaryText) {
+        navigator.clipboard.writeText(summaryText).then(() => {
+            document.getElementById('summaryContainer').innerText = 'Summary copied to clipboard!';
+            setTimeout(() => {
+                document.getElementById('summaryContainer').innerText = summaryText;
+            }, 1500);
+        }).catch(err => {
+            console.error('Could not copy text: ', err);
+        });
+    }
+});

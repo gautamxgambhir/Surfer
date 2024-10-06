@@ -6,7 +6,7 @@ from urllib.parse import urlparse
 import together
 import socket
 
-__version__ = '0.4'
+__version__ = '0.5'
 
 def version():
     return __version__
