@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>URL Summarizer</title>
+  <title>Surfer</title>
 </head>
+
 <body>
   <div class="container">
-    <h1>Surfer</h1>
-
-    <!-- Radio Buttons for selecting the action -->
-    <div>
-      <label><input type="radio" name="action" value="website_info" checked> Website Information</label><br>
-      <label><input type="radio" name="action" value="webpage_summary"> Webpage Content Summary</label>
+    <button class="theme-toggle" id="theme-toggle" title="Toggles light & dark" aria-label="auto" aria-live="polite">
+      <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+        <mask class="moon" id="moon-mask">
+          <rect x="0" y="0" width="100%" height="100%" fill="white" />
+          <circle cx="24" cy="10" r="6" fill="black" />
+        </mask>
+        <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+        <g class="sun-beams" stroke="currentColor" stroke-linecap="round">
+          <line x1="12" y1="1" x2="12" y2="3" />
+          <line x1="12" y1="21" x2="12" y2="23" />
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+          <line x1="1" y1="12" x2="3" y2="12" />
+          <line x1="21" y1="12" x2="23" y2="12" />
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        </g>
+      </svg>
+    </button>
+    <div class="title-container">
+      <a href="https://github.com/gautamxgambhir/Surferr" class="title">Surfer</a>
     </div>
-
-    <div id="bulletPointsContainer" style="display: none;">
-      <label><input type="checkbox" id="bulletPointsCheck"> Get Summary in Bullet Points</label><br>
-      <div id="bulletPointsInput" style="display: none;">
-        <label for="bulletPointsNumber">Number of Bullet Points:</label>
-        <input type="number" id="bulletPointsNumber" min="1" value="3">
-      </div>
+    <div class="radio-container">
+      <label>
+        <input type="radio" name="action" value="website_info" checked class="radios"> Website Information
+      </label>
+      <label>
+        <input type="radio" name="action" value="webpage_summary" class="radios"> Webpage Content Summary
+      </label>
     </div>
-
-    <button id="submit">Submit</button>
-    <div id="summaryContainer"></div>
+    <button id="submit" class="submit">Submit</button>
+    <div id="summaryContainer" class="summaryContainer"></div>
   </div>
 
   <script src="popup.js"></script>
 </body>
+
 </html>

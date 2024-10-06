@@ -1,30 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+@import "https://unpkg.com/open-props/easings.min.css";
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --title-color: #0388fc;
+  --border-color: #0388fc;
+  --button-bg-color: #0388fc;
+  --button-hover-color: #ffffff;
+  --summary-bg-color: #f1f1f1;
+  --icon-fill: #5b5b5b;
+  --icon-fill-hover: #2c2c2c;
+}
+
+.dark-theme {
+  --bg-color: #333333;
+  --text-color: #ffffff;
+  --title-color: #0388fc;
+  --border-color: #ffffff;
+  --button-bg-color: #0388fc;
+  --button-hover-color: #333333;
+  --summary-bg-color: #414141;
+  --icon-fill: #8a8a8a;
+  --icon-fill-hover: rgb(197, 197, 197);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
 .container {
-  width: 300px;
-  padding: 10px;
+  width: 400px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.1s ease-in;
 }
 
-h1 {
-  font-size: 25px;
-  margin-bottom: 10px;
-  color: #0388fc;
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+  padding: 20px;
+  flex-direction: column;
 }
 
-#submit {
+.title {
+  font-size: 55px;
+  color: var(--title-color);
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin-block-end: 0px;
+  margin-block-start: 10px;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.radio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
   width: 100%;
+  margin-bottom: 20px;
+}
+
+.radio-container label {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 250px;
+  text-align: left;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.submit {
+  width: 70%;
+  text-align: center;
+  margin-bottom: 20px;
   padding: 10px;
-  background-color: #0388fc;
-  color: white;
+  border-radius: 5px;
+  transition: 0.5s ease-in-out;
+  color: #FFF;
+  font-size: 20px;
+  background-color: var(--button-bg-color);
+  cursor: pointer;
+  border: none;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}
+
+.submit:hover {
+  box-shadow: 0px 0px 0px 2.5px var(--button-hover-color) inset, 0px 0px 0px 5px var(--button-bg-color);
+}
+
+.summaryContainer {
+  width: 90%;
+  padding: 10px;
+  background-color: var(--summary-bg-color);
+  border-radius: 5px;
+  max-height: 250px;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.sun-and-moon> :is(.moon, .sun, .sun-beams) {
+  transform-origin: center;
+}
+
+.sun-and-moon> :is(.moon, .sun) {
+  fill: var(--icon-fill);
+}
+
+.theme-toggle:is(:hover, :focus-visible)>.sun-and-moon> :is(.moon, .sun) {
+  fill: var(--icon-fill-hover);
+  transition: 0.5s;
+}
+
+.sun-and-moon>.sun-beams {
+  stroke: var(--icon-fill);
+  stroke-width: 2px;
+}
+
+.theme-toggle:is(:hover, :focus-visible) .sun-and-moon>.sun-beams {
+  stroke: var(--icon-fill-hover);
+  transition: 0.5s;
+}
+
+[data-theme="dark"] .sun-and-moon>.sun {
+  transform: scale(1.75);
+}
+
+[data-theme="dark"] .sun-and-moon>.sun-beams {
+  opacity: 0;
+}
+
+[data-theme="dark"] .sun-and-moon>.moon>circle {
+  transform: translateX(-7px);
+}
+
+@supports (cx: 1) {
+  [data-theme="dark"] .sun-and-moon>.moon>circle {
+    cx: 17;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sun-and-moon>.sun {
+    transition: transform 0.5s var(--ease-elastic-3);
+  }
+}
+
+.sun-and-moon>.sun-beams {
+  transition: transform 0.5s var(--ease-elastic-4), opacity 0.5s var(--ease-3);
+}
+
+.sun-and-moon .moon>circle {
+  transition: transform 0.25s var(--ease-out-5);
+}
+
+@supports (cx: 1) {
+  .sun-and-moon .moon>circle {
+    transition: cx 0.25s var(--ease-out-5);
+  }
+}
+
+[data-theme="dark"] .sun-and-moon>.sun {
+  transition-timing-function: var(--ease-3);
+  transition-duration: 0.25s;
+  transform: scale(1.75);
+}
+
+[data-theme="dark"] .sun-and-moon>.sun-beams {
+  transition-duration: 0.15s;
+  transform: rotateZ(-25deg);
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
   border: none;
   cursor: pointer;
-  margin-top: 10px;
-  border-radius: 20px;
+  padding: 0;
+  margin: 0;
+  outline: none;
 }
 
-#summaryContainer {
-  margin-top: 20px;
-  padding: 10px;
-  background-color: #f1f1f1;
-  border-radius: 5px;
-  max-height: 150px;
-  overflow-y: auto; /* Allow scrolling if content exceeds height */
+.sun-and-moon {
+  width: 20px;
+  height: 20px;
+  fill: var(--icon-fill);
 }

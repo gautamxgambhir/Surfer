@@ -1,5 +1,5 @@
-document.getElementById('submit').addEventListener('click', function() {
-    chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+document.getElementById('submit').addEventListener('click', function () {
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         const url = tabs[0].url;
         const action = document.querySelector('input[name="action"]:checked').value;
 
@@ -17,36 +17,68 @@ document.getElementById('submit').addEventListener('click', function() {
             },
             body: JSON.stringify({ url: url }),
         })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok: ' + response.statusText);
-            }
-            return response.json();
-        })
-        .then(data => {
-            document.getElementById('summaryContainer').innerText = data.summary || data.error;
-        })
-        .catch(error => {
-            console.error('Fetch error:', error);
-            document.getElementById('summaryContainer').innerText = 'Error: ' + error.message;
-        });
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok: ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                document.getElementById('summaryContainer').innerText = data.summary || data.error;
+            })
+            .catch(error => {
+                console.error('Fetch error:', error);
+                document.getElementById('summaryContainer').innerText = 'Error: ' + error.message;
+            });
     });
 });
 
-// Show/hide bullet points input based on checkbox
-document.querySelector('input[name="action"]').forEach(radio => {
-    radio.addEventListener('change', function() {
-        const bulletPointsContainer = document.getElementById('bulletPointsContainer');
-        if (this.value === 'webpage_summary') {
-            bulletPointsContainer.style.display = 'block';
-        } else {
-            bulletPointsContainer.style.display = 'none';
-        }
-    });
-});
+const storageKey = 'theme-preference';
+const themeToggle = document.getElementById('theme-toggle');
 
-// Show/hide bullet points number input based on checkbox
-document.getElementById('bulletPointsCheck').addEventListener('change', function() {
-    const bulletPointsInput = document.getElementById('bulletPointsInput');
-    bulletPointsInput.style.display = this.checked ? 'block' : 'none';
+const onClick = () => {
+    theme.value = theme.value === 'light' ? 'dark' : 'light';
+    setPreference();
+};
+
+const getColorPreference = () => {
+    if (localStorage.getItem(storageKey)) {
+        return localStorage.getItem(storageKey);
+    } else {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+};
+
+const setPreference = () => {
+    localStorage.setItem(storageKey, theme.value);
+    reflectPreference();
+};
+
+const reflectPreference = () => {
+    document.firstElementChild.setAttribute('data-theme', theme.value);
+    themeToggle.setAttribute('aria-label', theme.value);
+
+    if (theme.value === 'dark') {
+        document.body.classList.add('dark-theme');
+        localStorage.setItem('theme', 'dark-theme');
+    } else {
+        document.body.classList.remove('dark-theme');
+        localStorage.setItem('theme', 'light-theme');
+    }
+};
+
+const theme = {
+    value: getColorPreference(),
+};
+
+reflectPreference();
+
+window.onload = () => {
+    reflectPreference();
+    themeToggle.addEventListener('click', onClick);
+};
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', ({ matches: isDark }) => {
+    theme.value = isDark ? 'dark' : 'light';
+    setPreference();
 });
