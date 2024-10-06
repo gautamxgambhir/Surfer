@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: surferr
-Version: 0.3
+Version: 0.4
 Summary: AI-Powered Website & Webpage Summarizer
 Home-page: https://github.com/gautamxgambhir/Surferr
 Author: Gautam Gambhir
@@ -39,6 +39,11 @@ Here’s what makes **Surfer** essential :
  - **Website Information Summarization** : Receive a 2-line overview of any website for a quick glance at its purpose and content.
  - **Webpage Content Summarization** : Get comprehensive summaries of webpage content in a concise format. 
  - **Real-time API Integration** : Surfer uses Together API and state-of-the-art models like BART for real-time summarization. 
+
+## New Features
+
+- **Dark/Light Theme Toggle**: Surfer now includes a theme toggle button, allowing users to switch between light and dark modes for a comfortable browsing experience.
+- **Improved UI**: The UI has been enhanced for better and a more intuitive user experience. All elements, including the radio buttons and submit button, are now more user-friendly and visually appealing.
 
 ## Where to get it?
 
