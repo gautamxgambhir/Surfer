@@ -30,6 +30,12 @@ Here’s what makes **Surfer** essential :
  - **Webpage Content Summarization** : Get comprehensive summaries of webpage content in a concise format. 
  - **Real-time API Integration** : Surfer uses Together API and state-of-the-art models like BART for real-time summarization. 
 
+## New Features
+
+- **Dark/Light Theme Toggle**: Surfer now includes a theme toggle button, allowing users to switch between light and dark modes for a comfortable browsing experience.
+- **Improved UI**: The UI has been enhanced for better and a more intuitive user experience. All elements, including the radio buttons and submit button, are now more user-friendly and visually appealing.
+
+
 ## Where to get it?
 
 The extension is hosted on GitHub at : https://github.com/gautamxgambhir/surferr
