@@ -14,7 +14,6 @@ Surfer delivers concise summaries tailored to your needs.
 With Surfer, you can :
  - Get brief website summaries with just two lines of information.
  - Generate detailed webpage content summaries from articles, blogs, and more.
- - Choose between paragraph summaries or bullet points for a customized reading experience.
 
 ## Main Features
 

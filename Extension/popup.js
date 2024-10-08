@@ -85,15 +85,22 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', ({ 
 
 document.getElementById('summaryContainer').addEventListener('click', function () {
     const summaryText = document.getElementById('summaryContainer').innerText;
-
+  
     if (summaryText) {
-        navigator.clipboard.writeText(summaryText).then(() => {
-            document.getElementById('summaryContainer').innerText = 'Summary copied to clipboard!';
-            setTimeout(() => {
-                document.getElementById('summaryContainer').innerText = summaryText;
-            }, 1500);
-        }).catch(err => {
-            console.error('Could not copy text: ', err);
-        });
+      navigator.clipboard.writeText(summaryText).then(() => {
+        const summaryContainer = document.getElementById('summaryContainer');
+        const copiedText = document.getElementById('copiedText');
+  
+        // Blur the summary and show the copied message
+        summaryContainer.classList.add('blur');
+        copiedText.style.display = 'block';
+  
+        setTimeout(() => {
+          summaryContainer.classList.remove('blur');
+          copiedText.style.display = 'none';
+        }, 1500);
+      }).catch((err) => {
+        console.error('Could not copy text: ', err);
+      });
     }
-});
+  });
