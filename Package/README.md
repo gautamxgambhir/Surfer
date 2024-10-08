@@ -135,7 +135,7 @@ git clone https://github.com/gautamxgambhir/Surferr.git
 ## Usage
 Once installed, Surfer can summarize websites and webpage content directly from your Chrome browser :
 
-[Download Video Tutorial for Surfer Usage](https://cdn.discordapp.com/attachments/924595995252232222/1290820853075808307/Project_Video.mp4?ex=66fdda19&is=66fc8899&hm=0fde6035c0fdcc04517fa4554bd821535504d7e0f23bb829355c7622c2263bbc&)
+[Download Video Tutorial for Surfer Usage](https://cdn.discordapp.com/attachments/924595995252232222/1293185320162168873/Project_Video.mp4?ex=6706742e&is=670522ae&hm=e31213b5c11443b0395f0533baf35719ad992dabf58fbcb1475e205b42ca3aa2&)
 
 #### 1. Open the Surfer Extension :
  - Click on the Surfer icon in your Chrome toolbar.
